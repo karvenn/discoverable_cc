@@ -1,0 +1,11 @@
+name = "discoverable"
+compatibility_date = "2024-08-06"
+
+[env.production]
+account_id = "744fb1438dbe57669172982e779501b4"
+workers_dev = false
+
+# Pages configuration
+[[env.production.routes]]
+pattern = "*"
+custom_domain = false
