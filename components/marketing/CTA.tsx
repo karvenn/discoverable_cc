@@ -1,19 +1,37 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { getCTAContent } from '@/lib/content';
+import pricingData from '@/config/pricing.json';
 
 export function CTA() {
   const cta = getCTAContent();
+  const [selectedPackage, setSelectedPackage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     website: '',
-    message: ''
+    message: '',
+    package: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    // Get package from URL params
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const packageId = params.get('package');
+      if (packageId) {
+        const tier = pricingData.tiers.find(t => t.id === packageId);
+        if (tier) {
+          setSelectedPackage(tier.name);
+          setFormData(prev => ({ ...prev, package: tier.name }));
+        }
+      }
+    }
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,6 +39,7 @@ export function CTA() {
     
     // Simulate form submission - in production, this would send to your backend
     console.log('Form submitted:', formData);
+    console.log('Selected package:', formData.package || 'No package selected');
     
     // Here you would typically:
     // 1. Send data to your API endpoint
@@ -33,12 +52,13 @@ export function CTA() {
       // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
-        setFormData({ name: '', email: '', website: '', message: '' });
+        setFormData({ name: '', email: '', website: '', message: '', package: '' });
+        setSelectedPackage('');
       }, 3000);
     }, 1000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -65,6 +85,11 @@ export function CTA() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            {selectedPackage && (
+              <div className="mb-6 p-4 bg-white/10 rounded-lg">
+                <p className="text-white font-semibold">Selected Package: {selectedPackage}</p>
+              </div>
+            )}
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <input
@@ -103,6 +128,21 @@ export function CTA() {
             </div>
             
             <div className="mb-6">
+              <select
+                name="package"
+                value={formData.package}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600 mb-4"
+                required
+              >
+                <option value="">Select a package...</option>
+                {pricingData.tiers.map((tier) => (
+                  <option key={tier.id} value={tier.name}>
+                    {tier.name} - ${tier.price.monthly}/month
+                  </option>
+                ))}
+              </select>
+              
               <textarea
                 name="message"
                 value={formData.message}

@@ -7,8 +7,8 @@
       "keywords": 6,
       "pages": 6,
       "price": {
-        "monthly": 499,
-        "annually": 4990,
+        "monthly": 99,
+        "annually": 990,
         "currency": "$",
         "discount": "2 months free"
       },
@@ -20,7 +20,7 @@
         "Schema markup implementation",
         "Google Search Console setup",
         "Monthly performance reports",
-        "Core Web Vitals optimization"
+        "Site speed optimization"
       ],
       "highlights": [
         "SEO only",
@@ -37,8 +37,8 @@
       "keywords": 12,
       "pages": 12,
       "price": {
-        "monthly": 999,
-        "annually": 9990,
+        "monthly": 199,
+        "annually": 1990,
         "currency": "$",
         "discount": "2 months free"
       },
@@ -47,11 +47,9 @@
         "12 keyword targeting strategy",
         "12 pages optimization",
         "AI platform optimization (ChatGPT, Claude, Gemini)",
-        "Knowledge graph integration",
         "Citation building strategy",
         "External source references",
         "Diverse content formats (FAQ, How-to, Guides)",
-        "AI visibility tracking dashboard",
         "Bi-weekly performance reports"
       ],
       "highlights": [
@@ -69,8 +67,8 @@
       "keywords": 24,
       "pages": 24,
       "price": {
-        "monthly": 1999,
-        "annually": 19990,
+        "monthly": 399,
+        "annually": 3990,
         "currency": "$",
         "discount": "2 months free"
       },
@@ -82,7 +80,6 @@
         "Guest posting on authority sites",
         "Digital PR & brand mentions",
         "Competitor backlink analysis",
-        "Link reclamation strategy",
         "Custom content creation",
         "Priority support & consultation",
         "Weekly performance reports",

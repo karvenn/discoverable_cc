@@ -9,10 +9,10 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-            Simple, Transparent Pricing
+            Choose Your Growth Package
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-            Choose the perfect plan to boost your online visibility
+            Flexible plans designed to boost your online visibility through SEO, AI optimization, and strategic link building
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export function Pricing() {
                 </ul>
                 
                 <div className="mt-8">
-                  <Link href="#enquiry">
+                  <Link href={`#enquiry?package=${tier.id}`}>
                     <Button 
                       size="lg" 
                       variant={tier.popular ? 'primary' : 'outline'}
@@ -100,59 +100,6 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            {pricingData.comparison.title}
-          </h3>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-700">
-                  <th className="text-left py-4 px-4 font-medium text-gray-900 dark:text-white">
-                    Features
-                  </th>
-                  {pricingData.tiers.map((tier) => (
-                    <th key={tier.id} className="text-center py-4 px-4 font-medium text-gray-900 dark:text-white">
-                      {tier.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {pricingData.comparison.features.map((feature, index) => (
-                  <tr 
-                    key={index}
-                    className="border-b border-gray-100 dark:border-gray-800"
-                  >
-                    <td className="py-4 px-4 text-gray-700 dark:text-gray-300">
-                      {feature.name}
-                    </td>
-                    {['essentials', 'growth', 'dominance'].map((tierId) => (
-                      <td key={tierId} className="text-center py-4 px-4">
-                        {typeof feature[tierId as keyof typeof feature] === 'boolean' ? (
-                          feature[tierId as keyof typeof feature] ? (
-                            <svg className="w-5 h-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          ) : (
-                            <svg className="w-5 h-5 text-gray-300 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
-                          )
-                        ) : (
-                          <span className="text-gray-700 dark:text-gray-300">
-                            {feature[tierId as keyof typeof feature]}
-                          </span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
 
         <div className="mt-20">
           <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
