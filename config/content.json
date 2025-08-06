@@ -16,17 +16,11 @@
   },
   "navigation": {
     "main": [
-      { "name": "Services", "href": "#services" },
-      { "name": "Get Audit", "href": "#enquiry" },
       { "name": "Pricing", "href": "#pricing" },
-      { "name": "Case Studies", "href": "#case-studies" },
-      { "name": "Blog", "href": "/blog" }
+      { "name": "Get Audit", "href": "#enquiry" }
     ],
     "footer": [
-      { "name": "About", "href": "/about" },
-      { "name": "Contact", "href": "/contact" },
-      { "name": "Privacy", "href": "/privacy" },
-      { "name": "Terms", "href": "/terms" }
+      { "name": "Contact", "href": "#enquiry" }
     ]
   },
   "hero": {

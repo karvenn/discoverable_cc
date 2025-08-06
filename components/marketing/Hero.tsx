@@ -137,7 +137,7 @@ export function Hero() {
                 {hero.cta.primary}
               </Button>
             </a>
-            <a href="#services">
+            <a href="#pricing">
               <Button variant="outline" size="lg">
                 {hero.cta.secondary}
               </Button>

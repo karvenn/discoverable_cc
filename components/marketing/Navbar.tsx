@@ -39,12 +39,11 @@ export function Navbar() {
           
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm">
-              Get Started
-            </Button>
+            <Link href="#enquiry">
+              <Button size="sm">
+                Get Started
+              </Button>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -78,12 +77,11 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-2 space-y-2">
-              <Button variant="outline" size="sm" className="w-full">
-                Sign In
-              </Button>
-              <Button size="sm" className="w-full">
-                Get Started
-              </Button>
+              <Link href="#enquiry" className="block" onClick={() => setIsMenuOpen(false)}>
+                <Button size="sm" className="w-full">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
