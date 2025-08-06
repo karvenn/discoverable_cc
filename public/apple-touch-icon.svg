@@ -1,0 +1,17 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleBlueGradient180" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners (iOS style) -->
+  <rect x="0" y="0" width="180" height="180" rx="40" ry="40" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Letter D with gradient, larger and centered -->
+  <path d="M45 45 L45 135 L87 135 C113.5 135 135 113.5 135 87 C135 60.5 113.5 39 87 39 L45 45 Z
+           M60 60 L87 60 C104 60 120 76 120 93 C120 110 104 120 87 120 L60 120 L60 60 Z" 
+        fill="url(#purpleBlueGradient180)" 
+        stroke="none"/>
+</svg>

@@ -20,7 +20,9 @@
       { "name": "Get Audit", "href": "#enquiry" }
     ],
     "footer": [
-      { "name": "Contact", "href": "#enquiry" }
+      { "name": "Contact", "href": "#enquiry" },
+      { "name": "Privacy", "href": "/privacy" },
+      { "name": "Terms", "href": "/terms" }
     ]
   },
   "hero": {
