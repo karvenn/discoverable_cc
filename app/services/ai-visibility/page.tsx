@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { Button } from '@/components/ui/Button';
@@ -24,10 +25,12 @@ export default function AIVisibilityPage() {
                 {content.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/analyze">
+                <Link href="/#enquiry">
                   <Button size="lg">{content.hero.cta.primary}</Button>
-                </a>
-                <Button variant="outline" size="lg">{content.hero.cta.secondary}</Button>
+                </Link>
+                <Link href="/#enquiry">
+                  <Button variant="outline" size="lg">{content.hero.cta.secondary}</Button>
+                </Link>
               </div>
             </div>
           </div>

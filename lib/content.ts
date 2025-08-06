@@ -53,7 +53,10 @@ export interface Content {
     title: string;
     subtitle: string;
     form: {
-      placeholder: string;
+      namePlaceholder: string;
+      emailPlaceholder: string;
+      websitePlaceholder: string;
+      messagePlaceholder: string;
       button: string;
     };
     disclaimer: string;

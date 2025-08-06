@@ -17,7 +17,7 @@
   "navigation": {
     "main": [
       { "name": "Services", "href": "#services" },
-      { "name": "Free Analysis", "href": "/analyze" },
+      { "name": "Get Audit", "href": "#enquiry" },
       { "name": "Pricing", "href": "#pricing" },
       { "name": "Case Studies", "href": "#case-studies" },
       { "name": "Blog", "href": "/blog" }
@@ -37,8 +37,8 @@
     },
     "description": "Optimize your brand's presence across ChatGPT, Claude, Google AI, and traditional search engines with our cutting-edge platform.",
     "cta": {
-      "primary": "Start Free Analysis",
-      "secondary": "View Demo"
+      "primary": "Request Site Audit",
+      "secondary": "Learn More"
     },
     "features": [
       "No credit card required",
@@ -120,13 +120,16 @@
     ]
   },
   "cta": {
-    "title": "Ready to Boost Your Digital Presence?",
-    "subtitle": "Get a free AI visibility and SEO audit report for your brand in just 24 hours.",
+    "title": "Request Your Free Site Audit",
+    "subtitle": "Our experts will analyze your AI visibility and SEO performance and provide personalized recommendations.",
     "form": {
-      "placeholder": "Enter your email",
-      "button": "Get Free Audit"
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "websitePlaceholder": "Website URL (e.g., example.com)",
+      "messagePlaceholder": "Tell us about your goals (optional)",
+      "button": "Request Free Audit"
     },
-    "disclaimer": "No credit card required • Results in 24 hours • 100% free"
+    "disclaimer": "We'll get back to you within 24 hours • 100% free consultation • No obligations"
   },
   "footer": {
     "description": "Making your brand impossible to miss in the AI era. Optimize for AI platforms and search engines with our cutting-edge technology.",
@@ -202,8 +205,8 @@
       "title": "Dominate AI Search Results",
       "subtitle": "Make your brand the go-to recommendation across ChatGPT, Claude, Gemini, and other AI platforms. Be present where AI makes decisions.",
       "cta": {
-        "primary": "Get AI Visibility Audit",
-        "secondary": "Schedule Consultation"
+        "primary": "Request Site Audit",
+        "secondary": "Contact Us"
       }
     },
     "platforms": {
@@ -261,7 +264,7 @@
       "title": "Advanced SEO That Delivers Results",
       "subtitle": "Dominate search rankings with our data-driven SEO strategies. We combine technical excellence with content mastery to drive organic growth.",
       "cta": {
-        "primary": "Get Free SEO Audit",
+        "primary": "Request Site Audit",
         "secondary": "View Case Studies"
       }
     },

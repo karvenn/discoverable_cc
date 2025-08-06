@@ -132,14 +132,16 @@ export function Hero() {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/analyze">
+            <a href="#enquiry">
               <Button size="lg" className="shadow-lg hover:shadow-xl">
                 {hero.cta.primary}
               </Button>
             </a>
-            <Button variant="outline" size="lg">
-              {hero.cta.secondary}
-            </Button>
+            <a href="#services">
+              <Button variant="outline" size="lg">
+                {hero.cta.secondary}
+              </Button>
+            </a>
           </div>
           
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
