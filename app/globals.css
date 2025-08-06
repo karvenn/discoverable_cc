@@ -113,6 +113,45 @@
   animation-delay: 4s;
 }
 
+/* Neural network animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Stagger animation delays for neural connections */
+.animate-pulse-slow:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animate-pulse-slow:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.animate-pulse-slow:nth-child(6) {
+  animation-delay: 2s;
+}
+
+.animate-pulse-slow:nth-child(8) {
+  animation-delay: 0.5s;
+}
+
+.animate-pulse-slow:nth-child(11) {
+  animation-delay: 1.5s;
+}
+
+.animate-pulse-slow:nth-child(17) {
+  animation-delay: 2.5s;
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
