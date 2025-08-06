@@ -1,0 +1,201 @@
+{
+  "tiers": [
+    {
+      "id": "essentials",
+      "name": "SEO Essentials",
+      "tagline": "Perfect for startups and small businesses",
+      "keywords": 6,
+      "pages": 6,
+      "price": {
+        "monthly": 499,
+        "annually": 4990,
+        "currency": "$",
+        "discount": "2 months free"
+      },
+      "features": [
+        "Technical SEO audit & fixes",
+        "6 keyword targeting strategy",
+        "6 pages optimization",
+        "Meta tags & descriptions",
+        "Schema markup implementation",
+        "Google Search Console setup",
+        "Monthly performance reports",
+        "Core Web Vitals optimization"
+      ],
+      "highlights": [
+        "SEO only",
+        "6 keywords",
+        "6 pages"
+      ],
+      "cta": "Start with Essentials",
+      "popular": false
+    },
+    {
+      "id": "growth",
+      "name": "SEO + AI Boost",
+      "tagline": "Ideal for growing brands seeking visibility",
+      "keywords": 12,
+      "pages": 12,
+      "price": {
+        "monthly": 999,
+        "annually": 9990,
+        "currency": "$",
+        "discount": "2 months free"
+      },
+      "features": [
+        "Everything in SEO Essentials",
+        "12 keyword targeting strategy",
+        "12 pages optimization",
+        "AI platform optimization (ChatGPT, Claude, Gemini)",
+        "Knowledge graph integration",
+        "Citation building strategy",
+        "External source references",
+        "Diverse content formats (FAQ, How-to, Guides)",
+        "AI visibility tracking dashboard",
+        "Bi-weekly performance reports"
+      ],
+      "highlights": [
+        "SEO + AI visibility",
+        "12 keywords",
+        "12 pages"
+      ],
+      "cta": "Boost Your Growth",
+      "popular": true
+    },
+    {
+      "id": "dominance",
+      "name": "Complete Dominance",
+      "tagline": "For brands that want to lead their industry",
+      "keywords": 24,
+      "pages": 24,
+      "price": {
+        "monthly": 1999,
+        "annually": 19990,
+        "currency": "$",
+        "discount": "2 months free"
+      },
+      "features": [
+        "Everything in SEO + AI Boost",
+        "24 keyword targeting strategy",
+        "24 pages optimization",
+        "Premium backlink building campaign",
+        "Guest posting on authority sites",
+        "Digital PR & brand mentions",
+        "Competitor backlink analysis",
+        "Link reclamation strategy",
+        "Custom content creation",
+        "Priority support & consultation",
+        "Weekly performance reports",
+        "Dedicated account manager"
+      ],
+      "highlights": [
+        "SEO + AI + Backlinks",
+        "24 keywords",
+        "24 pages"
+      ],
+      "cta": "Dominate Your Market",
+      "popular": false
+    }
+  ],
+  "comparison": {
+    "title": "Compare Plans",
+    "features": [
+      {
+        "name": "Keywords targeted",
+        "essentials": "6",
+        "growth": "12",
+        "dominance": "24"
+      },
+      {
+        "name": "Pages optimized",
+        "essentials": "6",
+        "growth": "12",
+        "dominance": "24"
+      },
+      {
+        "name": "Technical SEO audit",
+        "essentials": true,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "Content optimization",
+        "essentials": true,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "Schema markup",
+        "essentials": true,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "AI platform optimization",
+        "essentials": false,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "Citation building",
+        "essentials": false,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "Diverse content formats",
+        "essentials": false,
+        "growth": true,
+        "dominance": true
+      },
+      {
+        "name": "Backlink building",
+        "essentials": false,
+        "growth": false,
+        "dominance": true
+      },
+      {
+        "name": "Guest posting",
+        "essentials": false,
+        "growth": false,
+        "dominance": true
+      },
+      {
+        "name": "Digital PR",
+        "essentials": false,
+        "growth": false,
+        "dominance": true
+      },
+      {
+        "name": "Reporting frequency",
+        "essentials": "Monthly",
+        "growth": "Bi-weekly",
+        "dominance": "Weekly"
+      },
+      {
+        "name": "Dedicated manager",
+        "essentials": false,
+        "growth": false,
+        "dominance": true
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What's the difference between SEO and AI optimization?",
+      "answer": "SEO focuses on traditional search engines like Google, while AI optimization ensures your brand appears in AI-generated responses from ChatGPT, Claude, and other AI platforms."
+    },
+    {
+      "question": "How long before I see results?",
+      "answer": "SEO improvements typically show within 2-3 months. AI visibility can improve within weeks as platforms update their knowledge bases."
+    },
+    {
+      "question": "Can I change plans later?",
+      "answer": "Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle."
+    },
+    {
+      "question": "What are backlinks and why do they matter?",
+      "answer": "Backlinks are links from other websites to yours. They signal authority and trust to search engines, significantly boosting your rankings."
+    }
+  ]
+}

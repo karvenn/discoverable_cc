@@ -38,9 +38,9 @@ export interface Content {
     title: string;
     subtitle: string;
     items: {
-      aiVisibility: ServiceItem;
-      seo: ServiceItem;
-      analytics: ServiceItem;
+      essentials: ServiceItem;
+      growth: ServiceItem & { popular?: boolean };
+      dominance: ServiceItem;
     };
     cta: string;
   };

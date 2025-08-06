@@ -47,47 +47,48 @@
     ]
   },
   "services": {
-    "title": "Comprehensive Digital Presence Solutions",
-    "subtitle": "From AI platforms to search engines, we ensure your brand is discovered everywhere your customers are looking.",
+    "title": "Choose Your Growth Package",
+    "subtitle": "Flexible plans designed to boost your online visibility through SEO, AI optimization, and strategic link building.",
     "items": {
-      "aiVisibility": {
-        "title": "AI Visibility Boost",
-        "description": "Optimize your brand's presence across AI platforms",
+      "essentials": {
+        "title": "SEO Essentials",
+        "description": "Technical SEO foundation for sustainable growth",
         "features": [
-          "ChatGPT & Claude optimization",
-          "AI search result improvement",
-          "LLM training data presence",
-          "AI answer engine optimization",
-          "Real-time AI mention tracking"
+          "6 keywords targeted",
+          "6 pages optimized",
+          "Technical SEO audit",
+          "Meta & schema markup",
+          "Monthly reports"
         ],
-        "link": "/services/ai-visibility"
+        "link": "#pricing"
       },
-      "seo": {
-        "title": "Advanced SEO",
-        "description": "Dominate traditional search rankings",
+      "growth": {
+        "title": "SEO + AI Boost",
+        "description": "Dominate both search engines and AI platforms",
         "features": [
-          "Technical SEO audits",
-          "Content optimization",
-          "Schema markup implementation",
-          "Core Web Vitals optimization",
-          "Local SEO enhancement"
+          "12 keywords targeted",
+          "12 pages optimized",
+          "Everything in Essentials",
+          "AI platform optimization",
+          "Bi-weekly reports"
         ],
-        "link": "/services/seo"
+        "link": "#pricing",
+        "popular": true
       },
-      "analytics": {
-        "title": "Analytics & Insights",
-        "description": "Track and measure your digital presence",
+      "dominance": {
+        "title": "Complete Dominance",
+        "description": "Full-spectrum visibility with premium backlinks",
         "features": [
-          "AI visibility dashboard",
-          "SERP position tracking",
-          "Competitor analysis",
-          "ROI measurement",
-          "Custom reporting"
+          "24 keywords targeted",
+          "24 pages optimized",
+          "Everything in Growth",
+          "Premium backlink building",
+          "Weekly reports + dedicated manager"
         ],
-        "link": "/analyze"
+        "link": "#pricing"
       }
     },
-    "cta": "Learn More →"
+    "cta": "View Pricing →"
   },
   "testimonials": {
     "title": "Trusted by Leading Brands",
