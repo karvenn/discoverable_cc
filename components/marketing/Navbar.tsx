@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { APP_NAME, NAVIGATION } from '@/lib/constants';
+import { getBrand, getNavigation } from '@/lib/content';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const brand = getBrand();
+  const navigation = getNavigation();
   
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
@@ -17,14 +19,14 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg"></div>
               <span className="font-bold text-xl text-gray-900 dark:text-white">
-                {APP_NAME}
+                {brand.name}
               </span>
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {NAVIGATION.main.map((item) => (
+            {navigation.main.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -65,7 +67,7 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800">
           <div className="px-4 py-4 space-y-2">
-            {NAVIGATION.main.map((item) => (
+            {navigation.main.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}

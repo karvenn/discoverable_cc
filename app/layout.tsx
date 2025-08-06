@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { getMetadata } from "@/lib/content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const contentMetadata = getMetadata();
+
 export const metadata: Metadata = {
-  title: "Discoverable - AI Visibility & SEO Platform for Modern Brands",
-  description: "Maximize your brand's online presence with AI visibility optimization and advanced SEO. Get discovered by ChatGPT, Claude, Google AI, and traditional search engines.",
-  keywords: "AI visibility, SEO optimization, brand discovery, ChatGPT optimization, AI search presence, search engine optimization, digital marketing, AI marketing",
+  title: contentMetadata.title,
+  description: contentMetadata.description,
+  keywords: contentMetadata.keywords,
   authors: [{ name: "Discoverable Team" }],
   creator: "Discoverable",
   publisher: "Discoverable",

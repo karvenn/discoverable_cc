@@ -8,8 +8,10 @@ import { analyzeSEO, getScoreColor, getScoreLabel } from '@/lib/seo/analyzer';
 import { checkAIVisibility, getPresenceColor, getPresenceIcon } from '@/lib/ai/visibility-checker';
 import type { SEOAnalysisResult } from '@/lib/seo/analyzer';
 import type { AIVisibilityResult } from '@/lib/ai/visibility-checker';
+import { getAnalyzeContent } from '@/lib/content';
 
 export default function AnalyzePage() {
+  const content = getAnalyzeContent();
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [seoResult, setSeoResult] = useState<SEOAnalysisResult | null>(null);
@@ -44,10 +46,10 @@ export default function AnalyzePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Free Website Analysis
+            {content.title}
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Get instant insights into your website&apos;s SEO performance and AI visibility across major platforms.
+            {content.subtitle}
           </p>
         </div>
         
@@ -59,12 +61,12 @@ export default function AnalyzePage() {
                 type="url"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="Enter your website URL (e.g., https://example.com)"
+                placeholder={content.form.placeholder}
                 className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
               <Button type="submit" disabled={loading}>
-                {loading ? 'Analyzing...' : 'Analyze'}
+                {loading ? content.form.button.analyzing : content.form.button.analyze}
               </Button>
             </form>
           </CardContent>
@@ -84,7 +86,7 @@ export default function AnalyzePage() {
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                   }`}
                 >
-                  SEO Analysis
+                  {content.tabs.seo}
                 </button>
                 <button
                   onClick={() => setActiveTab('ai')}
@@ -94,7 +96,7 @@ export default function AnalyzePage() {
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                   }`}
                 >
-                  AI Visibility
+                  {content.tabs.ai}
                 </button>
               </div>
             </div>
@@ -105,7 +107,7 @@ export default function AnalyzePage() {
                 {/* Score Card */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">SEO Score</h2>
+                    <h2 className="text-xl font-semibold">{content.seo.score.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <div className="text-center">
@@ -137,7 +139,7 @@ export default function AnalyzePage() {
                 {/* Issues Card */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">Issues Found</h2>
+                    <h2 className="text-xl font-semibold">{content.seo.issues.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
@@ -166,7 +168,7 @@ export default function AnalyzePage() {
                 {/* Recommendations */}
                 <Card className="md:col-span-2">
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">Recommendations</h2>
+                    <h2 className="text-xl font-semibold">{content.seo.recommendations.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -190,7 +192,7 @@ export default function AnalyzePage() {
                 {/* Overall Score */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">AI Visibility Overview</h2>
+                    <h2 className="text-xl font-semibold">{content.ai.overview.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <div className="text-center mb-8">
@@ -198,7 +200,7 @@ export default function AnalyzePage() {
                         {aiResult.overall}%
                       </div>
                       <div className="text-lg text-gray-600 dark:text-gray-400 mt-2">
-                        Overall AI Visibility Score
+                        {content.ai.overview.scoreLabel}
                       </div>
                     </div>
                     
@@ -222,7 +224,7 @@ export default function AnalyzePage() {
                 {/* Visibility Factors */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">Visibility Factors</h2>
+                    <h2 className="text-xl font-semibold">{content.ai.factors.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -251,7 +253,7 @@ export default function AnalyzePage() {
                 {/* AI Recommendations */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-xl font-semibold">AI Optimization Recommendations</h2>
+                    <h2 className="text-xl font-semibold">{content.ai.recommendations.title}</h2>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -283,9 +285,9 @@ export default function AnalyzePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Instant Analysis</h3>
+                <h3 className="text-lg font-semibold mb-2">{content.features[0].title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Get comprehensive SEO and AI visibility insights in seconds
+                  {content.features[0].description}
                 </p>
               </CardContent>
             </Card>
@@ -297,9 +299,9 @@ export default function AnalyzePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Actionable Insights</h3>
+                <h3 className="text-lg font-semibold mb-2">{content.features[1].title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Receive specific recommendations to improve your online presence
+                  {content.features[1].description}
                 </p>
               </CardContent>
             </Card>
@@ -311,9 +313,9 @@ export default function AnalyzePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Track Progress</h3>
+                <h3 className="text-lg font-semibold mb-2">{content.features[2].title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Monitor improvements in your SEO and AI visibility over time
+                  {content.features[2].description}
                 </p>
               </CardContent>
             </Card>

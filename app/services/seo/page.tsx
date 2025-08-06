@@ -3,46 +3,10 @@ import { Footer } from '@/components/marketing/Footer';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { getSEOPageContent } from '@/lib/content';
 
 export default function SEOPage() {
-  const services = [
-    {
-      title: 'Technical SEO',
-      description: 'Optimize site architecture, speed, and crawlability',
-      features: ['Site speed optimization', 'Mobile responsiveness', 'XML sitemaps', 'Robots.txt optimization'],
-    },
-    {
-      title: 'On-Page SEO',
-      description: 'Perfect your content and HTML elements',
-      features: ['Title tag optimization', 'Meta descriptions', 'Header structure', 'Internal linking'],
-    },
-    {
-      title: 'Content Strategy',
-      description: 'Create content that ranks and converts',
-      features: ['Keyword research', 'Content planning', 'Topic clusters', 'Content optimization'],
-    },
-    {
-      title: 'Link Building',
-      description: 'Build authority with quality backlinks',
-      features: ['Link audit', 'Outreach campaigns', 'Guest posting', 'Brand mentions'],
-    },
-  ];
-  
-  const results = [
-    { metric: '250%', label: 'Average Traffic Increase' },
-    { metric: '180%', label: 'Conversion Rate Boost' },
-    { metric: '500+', label: 'Keywords Ranking #1' },
-    { metric: '95%', label: 'Client Retention Rate' },
-  ];
-  
-  const tools = [
-    'Google Search Console',
-    'SEMrush',
-    'Ahrefs',
-    'Screaming Frog',
-    'PageSpeed Insights',
-    'Google Analytics',
-  ];
+  const content = getSEOPageContent();
   
   return (
     <>
@@ -52,19 +16,18 @@ export default function SEOPage() {
         <section className="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <Badge variant="info" className="mb-4">SEO Optimization Service</Badge>
+              <Badge variant="info" className="mb-4">{content.badge}</Badge>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Advanced SEO That Delivers Results
+                {content.hero.title}
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-                Dominate search rankings with our data-driven SEO strategies. 
-                We combine technical excellence with content mastery to drive organic growth.
+                {content.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/analyze">
-                  <Button size="lg">Get Free SEO Audit</Button>
+                  <Button size="lg">{content.hero.cta.primary}</Button>
                 </a>
-                <Button variant="outline" size="lg">View Case Studies</Button>
+                <Button variant="outline" size="lg">{content.hero.cta.secondary}</Button>
               </div>
             </div>
           </div>
@@ -74,10 +37,10 @@ export default function SEOPage() {
         <section className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-              Proven SEO Results
+              {content.results.title}
             </h2>
             <div className="grid md:grid-cols-4 gap-8">
-              {results.map((result) => (
+              {content.results.metrics.map((result) => (
                 <div key={result.label} className="text-center">
                   <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                     {result.metric}
@@ -95,10 +58,10 @@ export default function SEOPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-              Comprehensive SEO Services
+              {content.services.title}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service) => (
+              {content.services.items.map((service) => (
                 <Card key={service.title}>
                   <CardHeader>
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -130,10 +93,10 @@ export default function SEOPage() {
         <section className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-              Enterprise-Grade SEO Tools
+              {content.tools.title}
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
-              {tools.map((tool) => (
+              {content.tools.items.map((tool) => (
                 <Badge key={tool} variant="default" className="px-4 py-2 text-sm">
                   {tool}
                 </Badge>
@@ -146,65 +109,26 @@ export default function SEOPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-              Our SEO Process Timeline
+              {content.timeline.title}
             </h2>
             <div className="max-w-3xl mx-auto">
               <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                    1
+                {content.timeline.steps.map((step, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                      {index + 1}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        {step.week}: {step.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Week 1-2: Comprehensive Audit
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Deep dive into your current SEO performance, competitor analysis, and opportunity identification.
-                    </p>
-                  </div>
-                </div>
+                ))}
                 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                    2
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Week 3-4: Strategy Development
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Create custom SEO roadmap with prioritized actions and measurable goals.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                    3
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Month 2-3: Implementation
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Execute technical fixes, content optimization, and link building campaigns.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                    4
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Ongoing: Monitor & Optimize
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Continuous tracking, reporting, and refinement to maintain and improve rankings.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -214,17 +138,17 @@ export default function SEOPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Dominate Search Rankings?
+              {content.cta.title}
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get a comprehensive SEO audit and custom strategy tailored to your business.
+              {content.cta.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="shadow-lg">
-                Get Started Today
+                {content.cta.buttons.primary}
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20">
-                Download SEO Guide
+                {content.cta.buttons.secondary}
               </Button>
             </div>
           </div>

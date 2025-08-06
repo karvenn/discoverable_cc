@@ -1,0 +1,347 @@
+{
+  "brand": {
+    "name": "Discoverable",
+    "domain": "discoverable.ai",
+    "tagline": "Making your brand impossible to miss in the AI era",
+    "email": "hello@discoverable.ai",
+    "social": {
+      "twitter": "@discoverable_ai",
+      "linkedin": "Discoverable AI"
+    }
+  },
+  "metadata": {
+    "title": "Discoverable - AI Visibility & SEO Platform for Modern Brands",
+    "description": "Maximize your brand's online presence with AI visibility optimization and advanced SEO. Get discovered by ChatGPT, Claude, Google AI, and traditional search engines.",
+    "keywords": "AI visibility, SEO optimization, brand discovery, ChatGPT optimization, AI search presence, search engine optimization, digital marketing, AI marketing"
+  },
+  "navigation": {
+    "main": [
+      { "name": "Services", "href": "#services" },
+      { "name": "Free Analysis", "href": "/analyze" },
+      { "name": "Pricing", "href": "#pricing" },
+      { "name": "Case Studies", "href": "#case-studies" },
+      { "name": "Blog", "href": "/blog" }
+    ],
+    "footer": [
+      { "name": "About", "href": "/about" },
+      { "name": "Contact", "href": "/contact" },
+      { "name": "Privacy", "href": "/privacy" },
+      { "name": "Terms", "href": "/terms" }
+    ]
+  },
+  "hero": {
+    "badge": "🚀 AI-First SEO Platform",
+    "title": {
+      "line1": "Get Discovered by",
+      "line2": "AI & Search Engines"
+    },
+    "description": "Optimize your brand's presence across ChatGPT, Claude, Google AI, and traditional search engines with our cutting-edge platform.",
+    "cta": {
+      "primary": "Start Free Analysis",
+      "secondary": "View Demo"
+    },
+    "features": [
+      "No credit card required",
+      "Results in 24 hours",
+      "500+ brands optimized"
+    ]
+  },
+  "services": {
+    "title": "Comprehensive Digital Presence Solutions",
+    "subtitle": "From AI platforms to search engines, we ensure your brand is discovered everywhere your customers are looking.",
+    "items": {
+      "aiVisibility": {
+        "title": "AI Visibility Boost",
+        "description": "Optimize your brand's presence across AI platforms",
+        "features": [
+          "ChatGPT & Claude optimization",
+          "AI search result improvement",
+          "LLM training data presence",
+          "AI answer engine optimization",
+          "Real-time AI mention tracking"
+        ],
+        "link": "/services/ai-visibility"
+      },
+      "seo": {
+        "title": "Advanced SEO",
+        "description": "Dominate traditional search rankings",
+        "features": [
+          "Technical SEO audits",
+          "Content optimization",
+          "Schema markup implementation",
+          "Core Web Vitals optimization",
+          "Local SEO enhancement"
+        ],
+        "link": "/services/seo"
+      },
+      "analytics": {
+        "title": "Analytics & Insights",
+        "description": "Track and measure your digital presence",
+        "features": [
+          "AI visibility dashboard",
+          "SERP position tracking",
+          "Competitor analysis",
+          "ROI measurement",
+          "Custom reporting"
+        ],
+        "link": "/analyze"
+      }
+    },
+    "cta": "Learn More →"
+  },
+  "testimonials": {
+    "title": "Trusted by Leading Brands",
+    "subtitle": "See how we've helped businesses transform their digital presence and achieve measurable results.",
+    "items": [
+      {
+        "id": "1",
+        "author": "Sarah Chen",
+        "company": "TechStart Inc.",
+        "role": "CEO",
+        "content": "Discoverable transformed our AI visibility. We now appear in 80% more AI-generated responses about our industry.",
+        "rating": 5
+      },
+      {
+        "id": "2",
+        "author": "Michael Rodriguez",
+        "company": "EcoProducts",
+        "role": "Marketing Director",
+        "content": "The ROI has been incredible. Our organic traffic increased by 250% in just 3 months.",
+        "rating": 5
+      },
+      {
+        "id": "3",
+        "author": "Emma Thompson",
+        "company": "FinanceFlow",
+        "role": "Head of Growth",
+        "content": "Finally, a platform that understands both traditional SEO and the new AI landscape. Game-changing.",
+        "rating": 5
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Boost Your Digital Presence?",
+    "subtitle": "Get a free AI visibility and SEO audit report for your brand in just 24 hours.",
+    "form": {
+      "placeholder": "Enter your email",
+      "button": "Get Free Audit"
+    },
+    "disclaimer": "No credit card required • Results in 24 hours • 100% free"
+  },
+  "footer": {
+    "description": "Making your brand impossible to miss in the AI era. Optimize for AI platforms and search engines with our cutting-edge technology.",
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "legal": {
+      "title": "Legal"
+    },
+    "copyright": "© 2024 Discoverable. All rights reserved."
+  },
+  "analyze": {
+    "title": "Free Website Analysis",
+    "subtitle": "Get instant insights into your website's SEO performance and AI visibility across major platforms.",
+    "form": {
+      "placeholder": "Enter your website URL (e.g., https://example.com)",
+      "button": {
+        "analyze": "Analyze",
+        "analyzing": "Analyzing..."
+      }
+    },
+    "tabs": {
+      "seo": "SEO Analysis",
+      "ai": "AI Visibility"
+    },
+    "seo": {
+      "score": {
+        "title": "SEO Score",
+        "labels": {
+          "excellent": "Excellent",
+          "good": "Good",
+          "needsImprovement": "Needs Improvement",
+          "poor": "Poor"
+        }
+      },
+      "issues": {
+        "title": "Issues Found"
+      },
+      "recommendations": {
+        "title": "Recommendations"
+      }
+    },
+    "ai": {
+      "overview": {
+        "title": "AI Visibility Overview",
+        "scoreLabel": "Overall AI Visibility Score"
+      },
+      "factors": {
+        "title": "Visibility Factors"
+      },
+      "recommendations": {
+        "title": "AI Optimization Recommendations"
+      }
+    },
+    "features": [
+      {
+        "title": "Instant Analysis",
+        "description": "Get comprehensive SEO and AI visibility insights in seconds"
+      },
+      {
+        "title": "Actionable Insights",
+        "description": "Receive specific recommendations to improve your online presence"
+      },
+      {
+        "title": "Track Progress",
+        "description": "Monitor improvements in your SEO and AI visibility over time"
+      }
+    ]
+  },
+  "aiVisibilityPage": {
+    "badge": "AI Visibility Service",
+    "hero": {
+      "title": "Dominate AI Search Results",
+      "subtitle": "Make your brand the go-to recommendation across ChatGPT, Claude, Gemini, and other AI platforms. Be present where AI makes decisions.",
+      "cta": {
+        "primary": "Get AI Visibility Audit",
+        "secondary": "Schedule Consultation"
+      }
+    },
+    "platforms": {
+      "title": "Optimize for Every Major AI Platform",
+      "items": [
+        { "name": "ChatGPT", "description": "OpenAI's conversational AI", "icon": "🤖" },
+        { "name": "Claude", "description": "Anthropic's AI assistant", "icon": "🧠" },
+        { "name": "Gemini", "description": "Google's multimodal AI", "icon": "✨" },
+        { "name": "Perplexity", "description": "AI-powered search engine", "icon": "🔍" }
+      ]
+    },
+    "features": {
+      "title": "Comprehensive AI Optimization Features",
+      "items": [
+        {
+          "title": "AI Content Optimization",
+          "description": "Structure your content to be easily understood and cited by AI systems",
+          "icon": "📝"
+        },
+        {
+          "title": "Knowledge Graph Integration",
+          "description": "Ensure your brand appears in AI knowledge bases and training data",
+          "icon": "🗂️"
+        },
+        {
+          "title": "Citation Building",
+          "description": "Create authoritative content that AI systems prefer to reference",
+          "icon": "📚"
+        },
+        {
+          "title": "Real-time Monitoring",
+          "description": "Track how AI platforms mention and recommend your brand",
+          "icon": "📊"
+        }
+      ]
+    },
+    "process": {
+      "title": "Our AI Visibility Process",
+      "steps": [
+        { "step": 1, "title": "Audit", "description": "Analyze current AI visibility and identify gaps" },
+        { "step": 2, "title": "Strategy", "description": "Develop custom AI optimization roadmap" },
+        { "step": 3, "title": "Implementation", "description": "Optimize content and technical infrastructure" },
+        { "step": 4, "title": "Monitor", "description": "Track improvements and refine strategy" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Boost Your AI Visibility?",
+      "subtitle": "Join hundreds of brands that are now recommended by AI systems worldwide.",
+      "button": "Start Your AI Journey"
+    }
+  },
+  "seoPage": {
+    "badge": "SEO Optimization Service",
+    "hero": {
+      "title": "Advanced SEO That Delivers Results",
+      "subtitle": "Dominate search rankings with our data-driven SEO strategies. We combine technical excellence with content mastery to drive organic growth.",
+      "cta": {
+        "primary": "Get Free SEO Audit",
+        "secondary": "View Case Studies"
+      }
+    },
+    "results": {
+      "title": "Proven SEO Results",
+      "metrics": [
+        { "metric": "250%", "label": "Average Traffic Increase" },
+        { "metric": "180%", "label": "Conversion Rate Boost" },
+        { "metric": "500+", "label": "Keywords Ranking #1" },
+        { "metric": "95%", "label": "Client Retention Rate" }
+      ]
+    },
+    "services": {
+      "title": "Comprehensive SEO Services",
+      "items": [
+        {
+          "title": "Technical SEO",
+          "description": "Optimize site architecture, speed, and crawlability",
+          "features": ["Site speed optimization", "Mobile responsiveness", "XML sitemaps", "Robots.txt optimization"]
+        },
+        {
+          "title": "On-Page SEO",
+          "description": "Perfect your content and HTML elements",
+          "features": ["Title tag optimization", "Meta descriptions", "Header structure", "Internal linking"]
+        },
+        {
+          "title": "Content Strategy",
+          "description": "Create content that ranks and converts",
+          "features": ["Keyword research", "Content planning", "Topic clusters", "Content optimization"]
+        },
+        {
+          "title": "Link Building",
+          "description": "Build authority with quality backlinks",
+          "features": ["Link audit", "Outreach campaigns", "Guest posting", "Brand mentions"]
+        }
+      ]
+    },
+    "tools": {
+      "title": "Enterprise-Grade SEO Tools",
+      "items": [
+        "Google Search Console",
+        "SEMrush",
+        "Ahrefs",
+        "Screaming Frog",
+        "PageSpeed Insights",
+        "Google Analytics"
+      ]
+    },
+    "timeline": {
+      "title": "Our SEO Process Timeline",
+      "steps": [
+        {
+          "week": "Week 1-2",
+          "title": "Comprehensive Audit",
+          "description": "Deep dive into your current SEO performance, competitor analysis, and opportunity identification."
+        },
+        {
+          "week": "Week 3-4",
+          "title": "Strategy Development",
+          "description": "Create custom SEO roadmap with prioritized actions and measurable goals."
+        },
+        {
+          "week": "Month 2-3",
+          "title": "Implementation",
+          "description": "Execute technical fixes, content optimization, and link building campaigns."
+        },
+        {
+          "week": "Ongoing",
+          "title": "Monitor & Optimize",
+          "description": "Continuous tracking, reporting, and refinement to maintain and improve rankings."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Dominate Search Rankings?",
+      "subtitle": "Get a comprehensive SEO audit and custom strategy tailored to your business.",
+      "buttons": {
+        "primary": "Get Started Today",
+        "secondary": "Download SEO Guide"
+      }
+    }
+  }
+}

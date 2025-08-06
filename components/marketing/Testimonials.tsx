@@ -1,21 +1,23 @@
 import { Card, CardContent } from '@/components/ui/Card';
-import { TESTIMONIALS } from '@/lib/constants';
+import { getTestimonials } from '@/lib/content';
 
 export function Testimonials() {
+  const testimonials = getTestimonials();
+  
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-            Trusted by Leading Brands
+            {testimonials.title}
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-            See how we&apos;ve helped businesses transform their digital presence and achieve measurable results.
+            {testimonials.subtitle}
           </p>
         </div>
         
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {TESTIMONIALS.map((testimonial) => (
+          {testimonials.items.map((testimonial) => (
             <Card key={testimonial.id} className="relative">
               <CardContent className="p-6">
                 <div className="flex mb-4">

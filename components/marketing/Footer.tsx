@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import { APP_NAME, NAVIGATION } from '@/lib/constants';
+import { getBrand, getNavigation, getFooterContent } from '@/lib/content';
 
 export function Footer() {
+  const brand = getBrand();
+  const navigation = getNavigation();
+  const footer = getFooterContent();
+  
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -10,10 +14,10 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg"></div>
-              <span className="font-bold text-xl text-white">{APP_NAME}</span>
+              <span className="font-bold text-xl text-white">{brand.name}</span>
             </div>
             <p className="text-gray-400 max-w-sm">
-              Making your brand impossible to miss in the AI era. Optimize for AI platforms and search engines with our cutting-edge technology.
+              {footer.description}
             </p>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -36,9 +40,9 @@ export function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">{footer.quickLinks.title}</h3>
             <ul className="space-y-2">
-              {NAVIGATION.main.map((item) => (
+              {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="hover:text-white transition-colors">
                     {item.name}
@@ -50,9 +54,9 @@ export function Footer() {
           
           {/* Legal */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <h3 className="text-white font-semibold mb-4">{footer.legal.title}</h3>
             <ul className="space-y-2">
-              {NAVIGATION.footer.map((item) => (
+              {navigation.footer.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="hover:text-white transition-colors">
                     {item.name}
@@ -64,7 +68,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 {APP_NAME}. All rights reserved.</p>
+          <p>{footer.copyright}</p>
         </div>
       </div>
     </footer>

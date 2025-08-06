@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
-import { SERVICES } from '@/lib/constants';
+import { getServicesContent } from '@/lib/content';
 import { Button } from '@/components/ui/Button';
 
 const icons = {
@@ -22,25 +22,22 @@ const icons = {
 };
 
 export function Services() {
+  const services = getServicesContent();
+  
   return (
     <section id="services" className="py-20 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-            Comprehensive Digital Presence Solutions
+            {services.title}
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-            From AI platforms to search engines, we ensure your brand is discovered everywhere your customers are looking.
+            {services.subtitle}
           </p>
         </div>
         
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {Object.entries(SERVICES).map(([key, service]) => {
-            const serviceLinks: { [key: string]: string } = {
-              aiVisibility: '/services/ai-visibility',
-              seo: '/services/seo',
-              analytics: '/analyze',
-            };
+          {Object.entries(services.items).map(([key, service]) => {
             
             return (
               <Card key={key} hover className="relative flex flex-col">
@@ -66,9 +63,9 @@ export function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={serviceLinks[key] || '#'} className="mt-6">
+                  <Link href={service.link || '#'} className="mt-6">
                     <Button variant="outline" className="w-full">
-                      Learn More →
+                      {services.cta}
                     </Button>
                   </Link>
                 </CardContent>
