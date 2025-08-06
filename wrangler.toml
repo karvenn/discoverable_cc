@@ -1,5 +1,6 @@
 name = "discoverable"
 compatibility_date = "2024-08-06"
+pages_build_output_dir = "out"
 
 [env.production]
 account_id = "744fb1438dbe57669172982e779501b4"
