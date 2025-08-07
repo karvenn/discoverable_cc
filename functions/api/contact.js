@@ -22,6 +22,15 @@ export async function onRequestPost(context) {
       });
     }
 
+    // Check if API key exists
+    if (!env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY not found in environment');
+      return new Response(JSON.stringify({ error: 'Email service not configured' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     // Send email using Resend API
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -33,7 +42,7 @@ export async function onRequestPost(context) {
         from: 'Discoverable <onboarding@resend.dev>',
         to: env.NOTIFICATION_EMAIL || 'hello@discoverable.cc',
         subject: `New Enquiry: ${body.name} - ${body.package || 'General'}`,
-        reply_to: body.email,
+        replyTo: body.email,
         html: `
           <!DOCTYPE html>
           <html>
