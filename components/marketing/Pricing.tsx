@@ -5,13 +5,13 @@ import pricingData from '@/config/pricing.json';
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="pricing" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Choose Your Growth Package
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
             Flexible plans designed to boost your online visibility through SEO, AI optimization, and strategic link building
           </p>
         </div>
@@ -32,21 +32,21 @@ export function Pricing() {
               )}
               
               <CardHeader className="text-center pb-8">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-white">
                   {tier.name}
                 </h3>
-                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-gray-400">
                   {tier.tagline}
                 </p>
                 
                 <div className="mt-6">
-                  <span className="text-4xl font-bold text-gray-900 dark:text-white">
+                  <span className="text-4xl font-bold text-white">
                     {tier.price.currency}{tier.price.monthly}
                   </span>
-                  <span className="text-gray-600 dark:text-gray-400">/month</span>
+                  <span className="text-gray-400">/month</span>
                 </div>
                 
-                <div className="mt-2 text-sm text-green-600 dark:text-green-400">
+                <div className="mt-2 text-sm text-green-400">
                   Save {tier.price.currency}{tier.price.monthly * 2} annually
                 </div>
                 
@@ -54,7 +54,7 @@ export function Pricing() {
                   {tier.highlights.map((highlight, index) => (
                     <span 
                       key={index}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300"
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-900/30 text-purple-300"
                     >
                       {highlight}
                     </span>
@@ -77,7 +77,7 @@ export function Pricing() {
                           clipRule="evenodd" 
                         />
                       </svg>
-                      <span className="text-gray-700 dark:text-gray-300 text-sm">
+                      <span className="text-gray-300 text-sm">
                         {feature}
                       </span>
                     </li>
@@ -102,7 +102,7 @@ export function Pricing() {
 
 
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          <h3 className="text-2xl font-bold text-center text-white mb-12">
             Frequently Asked Questions
           </h3>
           
@@ -110,12 +110,12 @@ export function Pricing() {
             {pricingData.faqs.map((faq, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">
+                  <h4 className="font-semibold text-white">
                     {faq.question}
                   </h4>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-gray-400">
                     {faq.answer}
                   </p>
                 </CardContent>

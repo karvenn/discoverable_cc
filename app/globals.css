@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Color system - using semantic naming for better maintainability */
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-  --color-muted: #f5f5f5;
-  --color-muted-foreground: #737373;
-  --color-border: #e5e5e5;
-  --color-accent: #f5f5f5;
-  --color-accent-foreground: #171717;
+  /* Dark mode colors only */
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
+  --color-muted: #262626;
+  --color-muted-foreground: #a3a3a3;
+  --color-border: #404040;
+  --color-accent: #262626;
+  --color-accent-foreground: #ededed;
 
   /* Typography system */
   --font-sans: var(--font-geist-sans);
@@ -16,19 +16,6 @@
   
   /* Spacing and sizing (optional custom values) */
   --radius: 0.5rem;
-}
-
-/* Dark mode with CSS custom properties */
-@media (prefers-color-scheme: dark) {
-  @theme inline {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-    --color-muted: #262626;
-    --color-muted-foreground: #a3a3a3;
-    --color-border: #404040;
-    --color-accent: #262626;
-    --color-accent-foreground: #ededed;
-  }
 }
 
 /* Base styles using Tailwind's layer system */
@@ -158,14 +145,14 @@ html {
   scroll-padding-top: 80px; /* Account for fixed navbar */
 }
 
-/* Custom scrollbar styles for better UX */
+/* Custom scrollbar styles for dark theme */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -175,13 +162,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #7c3aed, #2563eb);
-}
-
-/* Dark mode scrollbar */
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
 }
 
 /* Enhanced focus styles for accessibility */

@@ -8,11 +8,11 @@ export function Hero() {
   const hero = getHeroContent();
   const brand = getBrand();
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900 pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-gray-950 to-gray-900 pt-24 pb-20 sm:pt-32 sm:pb-28">
       {/* Neural Network Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <svg
-          className="absolute inset-0 w-full h-full opacity-[0.03] dark:opacity-[0.08]"
+          className="absolute inset-0 w-full h-full opacity-[0.08]"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 800"
           preserveAspectRatio="xMidYMid slice"
@@ -96,7 +96,7 @@ export function Hero() {
         </svg>
         
         {/* Tech grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" 
+        <div className="absolute inset-0 opacity-[0.05]" 
              style={{
                backgroundImage: `
                  linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
@@ -120,14 +120,14 @@ export function Hero() {
             {hero.badge}
           </Badge>
           
-          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
             {hero.title.line1}
             <span className="block mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               {hero.title.line2}
             </span>
           </h1>
           
-          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-400">
+          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400">
             {brand.tagline}. {hero.description}
           </p>
           
@@ -144,7 +144,7 @@ export function Hero() {
             </a>
           </div>
           
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

@@ -5,13 +5,13 @@ export function Testimonials() {
   const testimonials = getTestimonials();
   
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
             {testimonials.title}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
             {testimonials.subtitle}
           </p>
         </div>
@@ -28,20 +28,20 @@ export function Testimonials() {
                   ))}
                 </div>
                 
-                <blockquote className="text-gray-700 dark:text-gray-300 mb-6">
+                <blockquote className="text-gray-300 mb-6">
                   &ldquo;{testimonial.content}&rdquo;
                 </blockquote>
                 
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                <div className="border-t border-gray-700 pt-4">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full flex items-center justify-center text-white font-semibold">
                       {testimonial.author.charAt(0)}
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">
+                      <p className="text-sm font-medium text-white">
                         {testimonial.author}
                       </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                      <p className="text-sm text-gray-400">
                         {testimonial.role} at {testimonial.company}
                       </p>
                     </div>

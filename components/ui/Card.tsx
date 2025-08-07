@@ -10,8 +10,8 @@ export function Card({ children, className = '', hover = false }: CardProps) {
   return (
     <div 
       className={`
-        bg-white dark:bg-gray-900 
-        border border-gray-200 dark:border-gray-800 
+        bg-gray-900 
+        border border-gray-800 
         rounded-xl shadow-sm 
         ${hover ? 'transition-all duration-200 hover:shadow-lg hover:scale-[1.02]' : ''}
         ${className}

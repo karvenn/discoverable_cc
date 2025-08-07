@@ -25,13 +25,13 @@ export function Services() {
   const services = getServicesContent();
   
   return (
-    <section id="services" className="py-20 bg-white dark:bg-gray-950">
+    <section id="services" className="py-20 bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
             {services.title}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
             {services.subtitle}
           </p>
         </div>
@@ -50,13 +50,13 @@ export function Services() {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-lg flex items-center justify-center text-purple-400 mb-4">
                     {icons[key as keyof typeof icons]}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-semibold text-white">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">
+                  <p className="mt-2 text-gray-400">
                     {service.description}
                   </p>
                 </CardHeader>
@@ -67,7 +67,7 @@ export function Services() {
                         <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

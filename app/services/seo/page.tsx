@@ -14,14 +14,14 @@ export default function SEOPage() {
       <Navbar />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950 py-20">
+        <section className="bg-gradient-to-b from-gray-900 to-gray-950 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <Badge variant="info" className="mb-4">{content.badge}</Badge>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 {content.hero.title}
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
                 {content.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -35,18 +35,18 @@ export default function SEOPage() {
         </section>
         
         {/* Results Section */}
-        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
               {content.results.title}
             </h2>
             <div className="grid md:grid-cols-4 gap-8">
               {content.results.metrics.map((result) => (
                 <div key={result.label} className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">
                     {result.metric}
                   </div>
-                  <div className="text-gray-600 dark:text-gray-400">
+                  <div className="text-gray-400">
                     {result.label}
                   </div>
                 </div>
@@ -58,17 +58,17 @@ export default function SEOPage() {
         {/* Services Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
               {content.services.title}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {content.services.items.map((service) => (
                 <Card key={service.title}>
                   <CardHeader>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    <h3 className="text-xl font-semibold text-white">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                    <p className="text-gray-400 mt-2">
                       {service.description}
                     </p>
                   </CardHeader>
@@ -79,7 +79,7 @@ export default function SEOPage() {
                           <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                          <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -91,9 +91,9 @@ export default function SEOPage() {
         </section>
         
         {/* Tools Section */}
-        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
               {content.tools.title}
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -109,7 +109,7 @@ export default function SEOPage() {
         {/* Process Timeline */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
               {content.timeline.title}
             </h2>
             <div className="max-w-3xl mx-auto">
@@ -120,10 +120,10 @@ export default function SEOPage() {
                       {index + 1}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-lg font-semibold text-white mb-2">
                         {step.week}: {step.title}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-400">
                         {step.description}
                       </p>
                     </div>
