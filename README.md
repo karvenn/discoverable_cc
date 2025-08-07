@@ -54,7 +54,7 @@ Discoverable is a cutting-edge platform that helps brands maximize their online 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/discoverable.git
+git clone https://github.com/karvenn/discoverable_cc.git
 
 # Navigate to project directory
 cd discoverable
@@ -64,6 +64,12 @@ npm install
 
 # Set up environment variables
 cp .env.example .env.local
+
+# Configure Resend for email notifications:
+# 1. Sign up at https://resend.com
+# 2. Get your API key from https://resend.com/api-keys
+# 3. Add your API key to .env.local
+# 4. Update NOTIFICATION_EMAIL in .env.local
 
 # Run development server
 npm run dev

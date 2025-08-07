@@ -37,25 +37,36 @@ export function CTA() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission - in production, this would send to your backend
-    console.log('Form submitted:', formData);
-    console.log('Selected package:', formData.package || 'No package selected');
-    
-    // Here you would typically:
-    // 1. Send data to your API endpoint
-    // 2. Send email notification
-    // 3. Store in database
-    
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', website: '', message: '', package: '' });
+          setSelectedPackage('');
+        }, 5000);
+      } else {
+        // Handle error
+        console.error('Form submission error:', data.error);
+        alert(data.error || 'Failed to submit form. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      alert('Network error. Please check your connection and try again.');
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: '', email: '', website: '', message: '', package: '' });
-        setSelectedPackage('');
-      }, 3000);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
